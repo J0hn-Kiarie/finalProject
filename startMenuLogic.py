@@ -1,7 +1,6 @@
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
 from startWindow import Ui_startWindow
-from selectionWindow import Ui_selectionWindow
 from selectionLogic import *
 
 
@@ -17,5 +16,6 @@ class Start(QMainWindow, Ui_startWindow):
         self.selection_window = SelectionLogic()
         self.startButton.clicked.connect(lambda : self.openWindow())
 
-    def openWindow(self):
+    def openWindow(self) -> None:
+        """Opens the selection window after pressing start button"""
         self.selection_window.show()        

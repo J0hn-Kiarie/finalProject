@@ -1,4 +1,3 @@
-from PyQt6 import *
 from startMenuLogic import *
 from startWindow import *
 from playerLogic import *
