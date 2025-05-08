@@ -19,7 +19,7 @@ class SelectionLogic(QWidget, Ui_selectionWindow):
             self.musicLogic.loadFile(self.fileName)
             self.musicLogic.show()
         else:
-            self.entryLineEdit.setText("Enter an mp3 file name please")
+            self.warningLabel.setText("Enter an mp3 file name please")
         
         
 

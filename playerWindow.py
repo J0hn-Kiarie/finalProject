@@ -36,6 +36,13 @@ class Ui_playerWindow(object):
         self.pauseButton = QtWidgets.QPushButton(parent=playerWindow)
         self.pauseButton.setGeometry(QtCore.QRect(150, 140, 93, 28))
         self.pauseButton.setObjectName("pauseButton")
+        self.currentPlayback = QtWidgets.QLabel(parent=playerWindow)
+        self.currentPlayback.setGeometry(QtCore.QRect(20, 30, 55, 16))
+        self.currentPlayback.setObjectName("currentPlayback")
+        self.totalLength = QtWidgets.QLabel(parent=playerWindow)
+        self.totalLength.setGeometry(QtCore.QRect(320, 30, 55, 16))
+        self.totalLength.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.totalLength.setObjectName("totalLength")
 
         self.retranslateUi(playerWindow)
         QtCore.QMetaObject.connectSlotsByName(playerWindow)
@@ -47,6 +54,8 @@ class Ui_playerWindow(object):
         self.playButton.setText(_translate("playerWindow", "Play"))
         self.forwardButton.setText(_translate("playerWindow", "Forward"))
         self.pauseButton.setText(_translate("playerWindow", "Pause"))
+        self.currentPlayback.setText(_translate("playerWindow", "TextLabel"))
+        self.totalLength.setText(_translate("playerWindow", "TextLabel"))
 
 
 if __name__ == "__main__":

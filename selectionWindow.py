@@ -20,15 +20,20 @@ class Ui_selectionWindow(object):
         selectionWindow.setSizePolicy(sizePolicy)
         selectionWindow.setMinimumSize(QtCore.QSize(400, 200))
         selectionWindow.setMaximumSize(QtCore.QSize(400, 300))
-        self.label = QtWidgets.QLabel(parent=selectionWindow)
-        self.label.setGeometry(QtCore.QRect(30, 40, 71, 51))
-        self.label.setObjectName("label")
+        self.selectionLabel = QtWidgets.QLabel(parent=selectionWindow)
+        self.selectionLabel.setGeometry(QtCore.QRect(30, 40, 71, 51))
+        self.selectionLabel.setObjectName("selectionLabel")
         self.entryLineEdit = QtWidgets.QLineEdit(parent=selectionWindow)
         self.entryLineEdit.setGeometry(QtCore.QRect(110, 60, 191, 22))
         self.entryLineEdit.setObjectName("entryLineEdit")
         self.selectButton = QtWidgets.QPushButton(parent=selectionWindow)
         self.selectButton.setGeometry(QtCore.QRect(150, 120, 93, 28))
         self.selectButton.setObjectName("selectButton")
+        self.warningLabel = QtWidgets.QLabel(parent=selectionWindow)
+        self.warningLabel.setGeometry(QtCore.QRect(40, 30, 301, 20))
+        self.warningLabel.setText("")
+        self.warningLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.warningLabel.setObjectName("warningLabel")
 
         self.retranslateUi(selectionWindow)
         QtCore.QMetaObject.connectSlotsByName(selectionWindow)
@@ -36,7 +41,7 @@ class Ui_selectionWindow(object):
     def retranslateUi(self, selectionWindow):
         _translate = QtCore.QCoreApplication.translate
         selectionWindow.setWindowTitle(_translate("selectionWindow", "Form"))
-        self.label.setText(_translate("selectionWindow", "File Name:"))
+        self.selectionLabel.setText(_translate("selectionWindow", "File Name:"))
         self.selectButton.setText(_translate("selectionWindow", "Select"))
 
 
