@@ -77,12 +77,13 @@ class Logic(QMainWindow, Ui_playerWindow):
 
 
     def reverse(self) -> None:
+        """Returns to the beginning of the file"""
         newPosition = max(0, self.mediaPlayer.position() - self.mediaPlayer.duration())
         self.mediaPlayer.setPosition(newPosition)
         
 
-
     def forward(self) -> None:
+        """Skips ahead 5 seconds in the file, stopping at the end of the file"""
         newPosition = min(self.mediaPlayer.duration(), self.mediaPlayer.position() + 5000)
         self.mediaPlayer.setPosition(newPosition)
         
