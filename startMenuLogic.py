@@ -6,8 +6,6 @@ from selectionLogic import *
 
 
 
-
-
 class Start(QMainWindow, Ui_startWindow):
     def __init__(self):
         super().__init__()
